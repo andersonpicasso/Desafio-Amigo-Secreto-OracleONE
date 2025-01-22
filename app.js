@@ -8,9 +8,14 @@ function adicionarAmigo(){
         alert('Por favor, insira um nome válido')
     }
     else{
-        listaNomes.push(nome);
-        listaAmigos.innerHTML = listaNomes.join('<br>');
-        inputCampo.value = ''; 
+        if (listaNomes.includes(nome)){
+            inputCampo.value = '';
+            alert(`O nome ${nome} já está na lista`);}
+        else{
+            listaNomes.push(nome);
+            listaAmigos.innerHTML = listaNomes.join('<br>');
+            inputCampo.value = ''; 
+        }
     }
 }
 
