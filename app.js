@@ -4,7 +4,7 @@ function adicionarAmigo(){
     let inputCampo = document.querySelector('input');
     let nome = document.querySelector('input').value;
     let listaAmigos = document.getElementById('listaAmigos');
-    if(nome == ''){
+    if(verificarNomeVazio(nome) === true){
         alert('Por favor, insira um nome válido')
     }
     else{
@@ -37,3 +37,9 @@ function resetarLista(){
     listaAmigos.innerHTML = '';
     resultado.innerHTML = '';
 }
+
+function verificarNomeVazio(string){
+    let veficarString = !string.trim();
+    return veficarString;
+}
+
