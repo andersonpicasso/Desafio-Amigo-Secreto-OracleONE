@@ -43,3 +43,8 @@ function verificarNomeVazio(string){
     return veficarString;
 }
 
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter'){
+        adicionarAmigo();
+    }
+  });
