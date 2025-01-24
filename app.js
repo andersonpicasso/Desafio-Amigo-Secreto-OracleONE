@@ -3,9 +3,8 @@ let listaNomes = [];
 function adicionarAmigo(){
     let inputCampo = document.querySelector('input');
     let nome = document.querySelector('input').value;
-    let listaAmigos = document.getElementById('listaAmigos');
     if(verificarNomeVazio(nome) === true){
-        alert('Por favor, insira um nome válido')
+        alert('Por favor, insira um nome')
     }
     else{
         if (listaNomes.includes(nome)){
@@ -13,10 +12,15 @@ function adicionarAmigo(){
             alert(`O nome ${nome} já está na lista`);}
         else{
             listaNomes.push(nome);
-            listaAmigos.innerHTML = listaNomes.join('<br>');
+            mostrarNomes();
             inputCampo.value = ''; 
         }
     }
+}
+
+function mostrarNomes(){
+    let listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = listaNomes.join('<br>');
 }
 
 function sortearAmigo(){
