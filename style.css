@@ -6,6 +6,8 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    --color-reset: #000000;
+    --color-hover-reset: #F2F2CD;
 }
 
 /* Estilos gerais */
@@ -88,7 +90,9 @@ body {
 }
 
 .button-container {
-    width: 300px;
+    display: flex;
+    gap: 10px;
+    width: 570px;
     justify-content: center;
 }
 
@@ -167,7 +171,7 @@ ul {
     align-items: center;
     width: 100%;
     padding: 10px 40px;
-    color: var(--color-text);
+    color: var(--color-reset);
     background-color: var(--color-white);
     font-size: 18px;
 }
@@ -180,6 +184,6 @@ ul {
 }
 
 .button-reset:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-hover-reset);
 }
 
